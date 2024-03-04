@@ -20,9 +20,9 @@
 
   // If you want to set a background image on the hero section, uncomment these with your custom image
 
-  /* background: url("/src/assets/[your-image].png");
+  background: rgb(47, 47, 92);
   background-position: center;
-  background-size: cover; */
+  background-size: cover;
 
   @include respond(phone) {
     padding: 0rem $default-font-size;
@@ -32,7 +32,8 @@
     font-size: 5.6rem;
     font-weight: 700;
     margin-bottom: 3.2rem;
-    text-align: left;
+    text-align: center;
+    
 
     @include respond(tab-land) {
       font-size: 4rem;
@@ -52,6 +53,9 @@
 
   .hero-cta {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 
     @include respond(tab-port) {
       justify-content: center;
