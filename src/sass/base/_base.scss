@@ -18,10 +18,10 @@ body {
   height: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #2f2f5c;
+  background: #000000;
 }
 ::-webkit-scrollbar-thumb {
-  background: $light-grey;
+  background: $primary-color;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: $primary-color;
