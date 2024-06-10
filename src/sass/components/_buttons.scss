@@ -24,22 +24,22 @@
 /* Hero Style */
 .cta-btn--hero {
   @include supportColorForIE11();
-  border-width: 2px;
+  border-width: 4px;
   border-style: solid;
   -moz-border-image: -moz-linear-gradient(
     135deg,
-    $primary-color 0%,
-    $secondary-color 100%
+    $dark-blue-text 100%,
+    $secondary-color 0%
   );
   -webkit-border-image: -webkit-linear-gradient(
     135deg,
     $primary-color 0%,
-    $secondary-color 100%
+    $secondary-color 0%
   );
   border-image: linear-gradient(
     135deg,
     $primary-color 0%,
-    $secondary-color 100%
+    $dark-blue-text 100%
   );
   -webkit-border-image-slice: 1;
   border-image-slice: 1;
@@ -110,8 +110,8 @@
 .cta-btn--shop {
   display: inline-block;
   position: relative;
-  padding: 2rem 5rem;
-  font-size: 1.5rem;
+  padding: 2.5rem 25rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #fff;
   background-color: #bd00bd; /* Tomato color for attraction */
@@ -152,5 +152,73 @@
   .cta-btn--shop {
     font-size: 1.2rem;
     padding: 1rem 1.5rem;
+  }
+}
+
+/* Large home/back Button */
+.cta-btn--homeback {
+  display: inline-block;
+  position: relative;
+  padding: 2.1rem 15rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0020d8; /* Tomato color for attraction */
+  border: none;
+  border-radius: 8px;
+  line-height: 1;
+  z-index: 1;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.6s;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cta-btn--homeback::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: #080052; /* Darker shade for hover effect */
+  border-radius: 8px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+}
+
+.cta-btn--homeback:hover {
+  background-color: #000000; /* Darker shade for hover */
+  text-decoration: none;
+}
+
+.cta-btn--homeback:hover::after {
+  width: 100%;
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 768px) {
+  .cta-btn--homeback {
+    font-size: 1.2rem;
+    padding: 1rem 1.5rem;
+  }
+}
+
+/* custom */
+.cta-btn--custom {
+  color: $white-color;
+  border: 2px solid $white-color;
+
+  &::after {
+    background: $white-color;
+  }
+
+  &:hover {
+    color: $secondary-color;
+    text-decoration: none;
+
+    &::after {
+      width: 100%;
+    }
   }
 }
